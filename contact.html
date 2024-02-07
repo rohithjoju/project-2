@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Kerala Tourism</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+   
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body style="background-image:url(./GettyImages-505490132--1--2.jpg)">
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="#">Kerala Tourism</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="districts.html">Districts</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container mt-5">
+  <h1>Contact Us</h1>
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <h3>Send us a message</h3>
+      <form>
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <h3>Visit us</h3>
+      <p>Address: Kerala, India</p>
+      <p>Phone: +91 8943628088</p>
+      <h3>Find us on the map</h3>
+      
+      <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4016584.092792871!2d76.13836675!3d10.544276349999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0812ffd49cf55b%3A0x64bd90fbed387c99!2sKerala!5e0!3m2!1sen!2sin!4v1707216891121!5m2!1sen!2sin"
+      width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+<script>
+  
+  function initMap() {
+   
+    var keralaLocation = {lat: 10.8505, lng: 76.2711};
+  
+    var map = new google.maps.Map(
+        document.getElementById('map'), {zoom: 8, center: keralaLocation});
+    
+    var marker = new google.maps.Marker({position: keralaLocation, map: map});
+  }
+</script>
+
+</body>
+</html>
